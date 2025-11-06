@@ -1,0 +1,25 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: my_edms
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/edms  # replace with your DB URL
+    username: <DB_USERNAME>
+    password: <DB_PASSWORD>
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+minio:
+  url: http://localhost:9000
+  access-key: <MINIO_ACCESS_KEY>
+  secret-key: <MINIO_SECRET_KEY>
+  bucket-name: documents
+
+elasticsearch:
+  host: http://localhost:9200
